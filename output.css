@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css?family=Handlee|family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inspiration");
+@import url("https://fonts.googleapis.com/css?family=Ramaraja");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --home-color: #f66801;
+  --company-color: #fcd04c;
+  --portfolio-color: #9ec64c;
+  --product-color: #4091c0;
+  --blog-color: #c078d0;
+  --sith-color:#e91710;
+  --jedi-color:#b4e4f7;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+/* header et menu */
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  color: #fff;
+  list-style: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+ul li a:visited {
+  color: #fff;
+}
+ul li a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.ulMenu {
+  margin: 20px;
+  padding-right: 5px;
+}
+
+.liMenu {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  font-family: "Press Start 2P", cursive;
+}
+.liMenu a:link {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.liMenu-home {
+  border-bottom: 5px solid var(--sith-color);
+}
+
+.liMenu-company {
+  border-bottom: 5px solid var(--jedi-color);
+}
+
+.liMenu-portfolio {
+  border-bottom: 5px solid var(--sith-color);
+}
+
+.liMenu-product {
+  border-bottom: 5px solid var(--jedi-color);
+}
+
+.logo {
+  text-align: center;
+  margin-top: 20px;
+  padding-left: 50px;
+  float: left;
+}
+.logo a {
+  font-size: 1.3em;
+  color: #fff;
+  font-family: "Press Start 2P", cursive;
+  text-decoration: none;
+}
+.logo a img {
+  width: 100px;
+}
+.logo a p {
+  padding: 10px 0;
+}
+
+nav {
+  width: 100%;
+}
+
+.menuNav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url("images/fancy-pants.jpg");
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  box-shadow: 0px 15px 10px -15px #111;
+}
+
+/* Debut main */
+.divider {
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 10px 0;
+  border: none;
+  height: 1px;
+}
+
+/* section image */
+.grid-img {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+.grid-img img {
+  width: 90%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-shadow: 0px 15px 10px -15px #111;
+}
+
+.wrap-grid {
+  padding: 30px;
+  display: grid;
+  grid-gap: 5rem;
+  background-image: url("images/WallpaperDog.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.menuButton {
+  position: absolute;
+  top: 26px;
+  left: 80%;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.changeb1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.changeb2 {
+  opacity: 0;
+}
+
+.changeb3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media (max-width: 600px) {
+  .menuNav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("images/fancy-pants.jpg");
+    /* position: relative;
+    top: -1000px; */
+    transform: translateY(-1000px);
+  }
+
+  .menuNav-open {
+    /* top:0; */
+    transform: translateY(-1000px);
+  }
+
+  .container-article {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .item-a {
+    grid-column: 1;
+    grid-row: 1/2;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+  .item-a img {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .item-b {
+    grid-column: 1;
+    grid-row: 2/3;
+    padding-top: 20px;
+  }
+
+  .item-c {
+    grid-column: 1;
+    grid-row: 3/4;
+  }
+
+  .item-d {
+    grid-column: 1;
+    grid-row: 4/4;
+    padding-top: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+  }
+
+  .logo {
+    width: 100%;
+    padding: 0;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .menuButton {
+    visibility: visible;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .container-article {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item-a {
+    grid-column: 1;
+    grid-row: 1/4;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+
+  .item-a img {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .item-b {
+    grid-column: 2;
+    grid-row: 1/3;
+    padding-top: 20px;
+  }
+
+  .item-c {
+    grid-column: 2;
+    grid-row: 3/4;
+  }
+
+  .item-d {
+    grid-column: 1/3;
+    grid-row: 4/4;
+    padding-top: 20px;
+  }
+
+  nav ul {
+    font-size: 12px;
+  }
+
+  .ulMenu {
+    margin: 10px;
+    padding-right: 5px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .logo a {
+    margin: auto;
+    font-size: 1.2em;
+  }
+
+  .logo {
+    width: 20%;
+    display: inline-flex;
+    text-align: center;
+    float: left;
+    margin-top: 30px;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 600px) {
+  .wrap-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 900px) {
+  .wrap-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .container-article {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .item-a {
+    grid-column: 1;
+    grid-row: 1/4;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  }
+
+  .item-b {
+    grid-column: 2;
+    grid-row: 1/3;
+    padding-top: 20px;
+  }
+
+  .item-c {
+    grid-column: 2;
+    grid-row: 3/4;
+  }
+
+  .item-d {
+    grid-column: 3/5;
+    grid-row: 1/4;
+    padding-top: 20px;
+  }
+}
+/* section text */
+.section-text {
+  background-image: url("images/fancy-pants.jpg");
+  text-align: center;
+  padding: 80px 50px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-text_style {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.3em;
+  line-height: 2em;
+  color: #fff;
+}
+
+.container-article {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 30px 50px;
+  height: auto;
+}
+
+.item-a img {
+  width: 100%;
+  padding: 10px 0;
+}
+
+h1, h2, h3, h4 {
+  font-size: 2em;
+  color: var(--home-color);
+  font-weight: normal;
+}
+
+em {
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.readMore {
+  padding-top: 25px;
+}
+
+.article {
+  padding: 10px 0;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* contact */
+.wrap-background {
+  background-image: url("images/background_pattern.png");
+}
+
+.contact-title {
+  color: #F1F1F1;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.grid-contact {
+  text-align: left;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+label {
+  color: #fff;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  /* Full width */
+  padding: 8px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 10px;
+  /* Bottom margin */
+  resize: vertical;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+  color: #fff;
+}
+
+/*# sourceMappingURL=output.css.map */

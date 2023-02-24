@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css?family=Handlee|family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    --home-color: #f66801;
+    --company-color: #fcd04c;
+    --portfolio-color: #9ec64c;
+    --product-color: #4091c0;
+    --blog-color: #c078d0;
+    --sith-color:#e91710;
+    --jedi-color:#b4e4f7;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+   
+}
+
+@import 'menu';
+@import 'image';
+@import 'text';
+@import 'contact';
+@import 'form';

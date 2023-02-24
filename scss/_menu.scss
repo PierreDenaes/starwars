@@ -1,0 +1,96 @@
+@import "variable";
+@include googleFonts(Inspiration);
+@include googleFonts(Ramaraja);
+
+/* header et menu */
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        color: #fff;
+        list-style: none;
+        padding-left: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        & a:visited {
+            color: #fff;
+        }
+        & a:link {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+.ulMenu {
+    margin: 20px;
+    padding-right: 5px;
+}
+.liMenu {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    font-family: 'Press Start 2P', cursive;
+    & a:link {
+        color: #fff;
+        font-weight: bolder;
+    }
+}
+.liMenu-home {
+    border-bottom: 5px solid var(--sith-color);
+}
+
+.liMenu-company {
+    border-bottom: 5px solid var(--jedi-color);
+}
+
+.liMenu-portfolio {
+    border-bottom: 5px solid var(--sith-color);
+}
+
+.liMenu-product {
+    border-bottom: 5px solid var(--jedi-color);
+}
+
+.logo {
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 50px;
+    float: left;
+    & a {
+        font-size: 1.3em;
+        color: #fff;
+        font-family: 'Press Start 2P', cursive;
+        text-decoration: none;
+        & img {
+            width: 100px;
+        }
+        & p {
+            padding:10px 0;
+        }
+    }
+
+}
+nav {
+    width: 100%;  
+}
+.menuNav {
+    display: flex;
+    justify-content: flex-end;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: url('images/fancy-pants.jpg');
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    @include shadow-bottom;
+}
+
+/* Debut main */
+.divider {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+}

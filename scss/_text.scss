@@ -1,0 +1,60 @@
+/* section text */
+.section-text {
+    background-image: url('images/fancy-pants.jpg');
+    text-align: center;
+    padding: 80px 50px;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-text_style {
+    font-family:  'Press Start 2P', cursive;
+    font-size: 1.3em;
+    line-height: 2em;
+    color: #fff;
+}
+.container-article{
+    display: grid;
+    grid-gap: 2rem;
+    padding: 30px 50px;
+    height: auto;
+    
+}
+
+.item-a img {
+    width: 100%;
+    padding: 10px 0;
+}
+
+h1, h2, h3, h4 {
+    font-size: 2em;
+    color: var(--home-color);
+    font-weight: normal;
+}
+em {
+    color: rgba(0,0,0,0.5);
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.readMore {
+    padding-top: 25px;
+}
+.article{
+    padding: 10px 0;
+}
+.video-responsive { 
+    overflow:hidden; 
+    padding-bottom:56.25%; 
+    position:relative; 
+    height:0;
+}
+    
+.video-responsive iframe {
+    left:0; 
+    top:0; 
+    height:100%;
+    width:100%;
+    position:absolute;
+}

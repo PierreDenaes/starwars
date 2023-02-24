@@ -1,0 +1,6 @@
+@mixin googleFonts($font){
+	@import url('https://fonts.googleapis.com/css?family=#{$font}');
+}
+@mixin shadow-bottom {
+	box-shadow: 0px 15px 10px -15px #111;
+}
